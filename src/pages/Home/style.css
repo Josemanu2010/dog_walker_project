@@ -1,0 +1,36 @@
+#banner {
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -ms-background-size: cover;
+     -o-background-size: cover;
+     background-size: 100%;
+     .rgba {
+         background: rgba(2, 26, 227, .67);
+   }
+}
+
+section#renderwalker{
+    h3 {
+        position: relative;
+        width: 100%;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 1.5px;
+            bottom: 0;
+            background: rgb(24, 24, 24);
+            left: 30%;
+        }
+    }
+}
+
+
+#info-home {
+    /* clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); */
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 40% 95%, 40% 97%, 0% 100%);
+    img {
+        box-shadow: 0 15px 25px rgb(1, 54, 81),
+        0 0 20px rgb(0, 21, 35);
+    }
+}

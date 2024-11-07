@@ -1,0 +1,30 @@
+.animationrun {
+    position: relative;
+    img {
+        width: 10%;
+        animation: corre 120s linear infinite;
+        position: absolute;
+        bottom: 2px;      
+    }
+}
+
+@keyframes corre {
+    0% {
+        left: 0%;
+        transform: scaleX(1)
+    }
+    49% {
+        left: 100%;
+        transform: scaleX(1);
+        transition: 3s;
+    }
+    50% {
+        transform: scaleX(-1);
+        transition: 3s;
+    }
+    100% {
+        left: 0;
+        transform: scaleX(-1);
+    }
+
+}
