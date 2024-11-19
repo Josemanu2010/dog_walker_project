@@ -10,9 +10,15 @@ import jhon from '../assets/paseadores/Jhon.jpg'
 import gabriel from '../assets/paseadores/Gabriel.jpg'
 import { Link } from "react-router-dom"
 import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
+import { useState } from 'react'
 
 
-function RenderWalkers() {
+
+function RenderWalkers({verlink = false, textlink}) {
+    const [link, setLink] = useState(verlink)
+    const cambia = () => {
+        setLink(!verlink);
+    }
     // const data = {
     //     img: sofia,
     //     name: 'José',
@@ -24,7 +30,7 @@ function RenderWalkers() {
     //     local: 'Engativá'
     // }
   return (
-        <section className="flex gap-8 justify-center flex-wrap">
+        <section className="flex gap-8 justify-center flex-wrap py-5">
             <StructureWalkers 
                 img={sofia}
                 name="Sofia"
@@ -97,8 +103,7 @@ function RenderWalkers() {
                 local="Tunjuelito"
                 link="/profile" />
 
-            <Link to="/dwalker" className="border-[1px] border-[#e07937] text-[#e07937] py-2 px-10 rounded-[30px] hover:text-white font-semibold hover:bg-[#e07937] hover:border-black"><FontAwesomeIcon icon={faArrowCircleRight} /> Conoce a todos los  paseadores</Link>
-
+            {link && <Link to="/dwalker" className="border-[1px] border-[#e07937] text-[#e07937] py-2 px-10 rounded-[30px] hover:text-white font-semibold hover:bg-[#e07937] hover:border-black"><FontAwesomeIcon icon={faArrowCircleRight} /> {textlink} </Link>}
         </section>
   )
 }

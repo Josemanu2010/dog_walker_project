@@ -5,6 +5,7 @@ import Profile from './pages/Profile/Profile'
 import Header from "./modules/Header"
 import About from "./pages/About/About"
 import Contact from './pages/Contact/Contact'
+import Footer from "./modules/Footer"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/*" element={<Home />} />
       </Routes>
+      <Footer />
     </main>
   )
 }

@@ -1,9 +1,9 @@
 
-function Banner({ img, title, desc }) {
+function Banner({ img, title, desc, top }) {
     const setBanner = {
       backgroundImage: `url(${img})`,
       backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center -480px',
+      backgroundPosition: `center ${top}`,
       backgroundSize: '100%'
     } 
   return (

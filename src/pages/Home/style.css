@@ -34,3 +34,9 @@ section#renderwalker{
         0 0 20px rgb(0, 21, 35);
     }
 }
+
+#paseadores {
+    img:hover {
+        /* transform: skew(20deg); */
+    }
+}

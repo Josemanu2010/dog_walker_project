@@ -1,7 +1,14 @@
+import Banner from "../../components/Banner"
+import img_banner from '../../assets/app/dog_walker.webp'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <>
+      <Banner 
+        img={img_banner}
+        title="Contáctenos" 
+        desc="Lo atenderemos lo más pronto posible"/>
+    </>
   )
 }
 
